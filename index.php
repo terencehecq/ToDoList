@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php include('form.php')?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,31 +9,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> To Do Liste </h1>
+    <h1> To Do List </h1>
     <h2>Ajouter une tache</h2>
-    <form method="post" action="form.php" class="input_form">
+    <form method="post" class="input_form">
 		<input type="text" name="task" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
 	</form>
     <h2>Taches</h2>
-    <form action="form.php" method="post">
-<input type="checkbox" name="gender" value="task"></input>
+    <?php if(!empty($_POST['task'])){add_to_json();}; ?>
+    <form action="content.php" method="post">
+
+    <input type="submit" name="save_changes" value="save"></input>
 
 
 </form>
 </body>
 </html>
-
-<?php
-//Sanitisation et validation
-// $options = array(
-//     'task' 	=> FILTER_SANITIZE_STRING,
-//     );
-// $result = filter_input_array(INPUT_POST, $options); 
-
-// $_SESSION['task'] = $result['task'];
-// echo $result['task'];
-
-
-
-?>

@@ -1,48 +1,48 @@
-<?php session_start();
+<?php
 
 function add_to_json(){
-//Sanitisation et validation
 
-$task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING); 
+    $json_file = 'tasks.json';
 
-$_SESSION['task'] = $task;
-// echo "<pre>";
-// echo $task;
+    //Sanitisation et validation
 
-$new_task = [
-    "task" => $task,
-    "done" => false
-];
+    if(!empty($_POST['task'])){
+        $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING); 
 
-$task_json = json_encode($new_task, JSON_PRETTY_PRINT);
+        $new_task = [];
+        $new_task['task'] = $task;
+        $new_task['done'] = false;
 
-$json = 'tasks.json';
+        $tasks = file_get_contents($json_file);
+        $tasks = json_decode($tasks);
 
-file_get_contents($json);
-file_put_contents($json, $task_json . "\n", FILE_APPEND);
+        
+        $tasks[] = $new_task;
+        
+        $tasks_to_json = json_encode($tasks, JSON_PRETTY_PRINT);
+        
+        file_put_contents($json_file, $tasks_to_json);
 
+        echo '<pre>';
+        print_r($tasks);
+        echo '</pre>';
 
-$test = file($json);
-foreach($test as $task){
-    echo $task;
+    };
+
+    unset($_POST['task']);
+
 }
 
-}
 
-add_to_json();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+// function display_task(){
+//     $tasks = file_get_contents($json_file);
+//     $tasks = json_decode($tasks);
+//     foreach ($tasks as $key => $value) {
+//         // if ($key["done"] == false) {
+//             echo '<div>
+//                     <input type="checkbox" id="task' . $key . '" name="task">
+//                     <label for="task">' . $value["task"] . '</label>
+//                 </div>';
+//         }
+//     //   }
+// }
