@@ -11,8 +11,8 @@
     <h1> To Do List </h1>
 
     <?php 
-        include('content.php');
         include('form.php');
+        include('content.php');
     ?>
 
 
