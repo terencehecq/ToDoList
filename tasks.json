@@ -1,6 +1,13 @@
+<<<<<<< Updated upstream
 [
     {
         "task": "coucou",
         "done": false
     }
 ]
+=======
+{
+    "task": "jololo",
+    "done": false
+}
+>>>>>>> Stashed changes
