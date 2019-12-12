@@ -8,7 +8,6 @@
 <?php
 
     $json_file = 'tasks.json';
-
     //Sanitization
     if(!empty($_POST['task'])){
         $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING); 

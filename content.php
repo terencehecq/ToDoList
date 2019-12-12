@@ -20,9 +20,9 @@ $tasks = json_decode($tasks);
         <h2> A faire </h2>
         <div class="insert">
         <form method="post" id="toDo">
-            <?php foreach($tasks as $obj){
-                if($task['done'] == false){
-                    insert_task($obj, $obj['task']);
+            <?php foreach($tasks as $key=>$value){
+                if($value->done == false){
+                    insert_task($key, $value->task);
                 };
             }?>
         </form>
