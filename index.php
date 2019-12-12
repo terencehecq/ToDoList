@@ -14,10 +14,7 @@
     <form method="post" action="form.php" class="input_form">
 		<input type="text" name="task" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
-	</form>
-    <h2>Taches</h2>
-    <form action="form.php" method="post">
-<input type="checkbox" name="gender" value="task"></input>
+	
 
 
 </form>
@@ -26,13 +23,13 @@
 
 <?php
 //Sanitisation et validation
-// $options = array(
-//     'task' 	=> FILTER_SANITIZE_STRING,
-//     );
-// $result = filter_input_array(INPUT_POST, $options); 
+//$options = array(
+  //  'task' 	=> FILTER_SANITIZE_STRING,
+ //   );
+//$result = filter_input_array(INPUT_POST, $options); 
 
-// $_SESSION['task'] = $result['task'];
-// echo $result['task'];
+//$_SESSION['task'] = $result['task'];
+//echo $result['task'];
 
 
 
