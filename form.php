@@ -1,11 +1,15 @@
-<?php
+<h2>Ajouter une tache</h2>
+    <form method="post" class="input_form">
+		<input type="text" name="task" class="task_input">
+		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
+	</form>
 
-function add_to_json(){
+
+<?php
 
     $json_file = 'tasks.json';
 
-    //Sanitisation et validation
-
+    //Sanitization
     if(!empty($_POST['task'])){
         $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING); 
 
@@ -23,26 +27,28 @@ function add_to_json(){
         
         file_put_contents($json_file, $tasks_to_json);
 
-        echo '<pre>';
-        print_r($tasks);
-        echo '</pre>';
+        // echo '<pre>';
+        // print_r($tasks);
+        // echo '</pre>';
 
     };
 
-    unset($_POST['task']);
+    // echo $_POST['task'];
+    // unset($_POST['task']);
+    // echo "lol";
+    // echo $_POST['task'];
+    
 
+
+function display_task(){
+    $tasks = file_get_contents($json_file);
+    $tasks = json_decode($tasks);
+    foreach ($tasks as $key => $value) {
+        if ($key["done"] == false) {
+            echo '<div>
+                    <input type="checkbox" id="task' . $key . '" name="task">
+                    <label for="task">' . $value["task"] . '</label>
+                </div>';
+        }
+      }
 }
-
-
-// function display_task(){
-//     $tasks = file_get_contents($json_file);
-//     $tasks = json_decode($tasks);
-//     foreach ($tasks as $key => $value) {
-//         // if ($key["done"] == false) {
-//             echo '<div>
-//                     <input type="checkbox" id="task' . $key . '" name="task">
-//                     <label for="task">' . $value["task"] . '</label>
-//                 </div>';
-//         }
-//     //   }
-// }
