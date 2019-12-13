@@ -1,13 +1,8 @@
 <?php
 function insert_task ($index, $task){
     echo   '<div class="my_class">
-<<<<<<< HEAD
                 <input type="checkbox" name="done[]" value="'.$index.'">
                 <label for="done">' . $task . '</label>
-=======
-                <input type="checkbox" name="done" value="task'.$index.'">
-                <label for="done">' . $task .  '</label>
->>>>>>> louis
             </div>';
 };
 function insert_task_done($index, $task){
