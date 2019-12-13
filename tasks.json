@@ -5,14 +5,30 @@
     },
     {
         "task": "passer l&#39;aspirateur",
-        "done": false
+        "done": true
     },
     {
         "task": "Tondre la pelouse",
-        "done": false
+        "done": true
     },
     {
         "task": "abc",
+        "done": true
+    },
+    {
+        "task": "coucou",
+        "done": true
+    },
+    {
+        "task": "jean mich",
         "done": false
+    },
+    {
+        "task": "coucou",
+        "done": true
+    },
+    {
+        "task": "passer l&#39;aspirateur",
+        "done": true
     }
 ]
