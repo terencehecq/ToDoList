@@ -2,7 +2,7 @@
 function insert_task ($index, $task){
     echo   '<div class="my_class">
                 <input type="checkbox" name="done" value="task'.$index.'">
-                <label for="done">' . $task . '</label>
+                <label for="done">' . $task .  '</label>
             </div>';
 };
 function insert_task_done($index, $task){
@@ -20,10 +20,9 @@ $tasks = json_decode($tasks);
 
 <div class="content">
 
-  <h2 class= "todo"> To Do List </h2>
-
-    <h2> A faire </h2>
+   
     <div class="insert">
+    <h2> A faire </h2>
         <?php 
             foreach($tasks as $key => $value){
                 if($value->done == false){
@@ -32,10 +31,11 @@ $tasks = json_decode($tasks);
             }
         ?>
     </div>
-    <button>Archiver</button>
+    <button class="arch">Archiver</button>
 
-    <h2> Archive </h2>
+    
     <div class="archive">
+    <h2> Archive </h2>
         <?php 
             foreach($tasks as $key => $value){
                 if($value->done == true){

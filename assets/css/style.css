@@ -1,0 +1,115 @@
+body {
+  background-color: #ffffff;
+  color: #181717;
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Serif Pro', serif;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.todo {
+  background-color: #1F2121;
+  margin: 0px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.input_form {
+  background-color: #245060;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+}
+
+.task_input {
+  width: 30%;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Serif Pro', serif;
+  font-family: 'Indie Flower', cursive;
+}
+
+.add_btn {
+  font-size: 18px;
+  padding: 10px;
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Serif Pro', serif;
+  font-family: 'Indie Flower', cursive;
+}
+
+.insert {
+  font-size: 22px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40%;
+  width: 400px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  margin-right: 90px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  background-color: #ffd900;
+  -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+
+.archive {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40%;
+  width: 400px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 90px;
+  background-color: #ffd900;
+  -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+
+.insert:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.archive:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.arch {
+  font-size: 50px;
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Serif Pro', serif;
+  font-family: 'Indie Flower', cursive;
+}
+/*# sourceMappingURL=style.css.map */
