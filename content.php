@@ -1,12 +1,12 @@
 <?php
 function insert_task ($index, $task){
-    echo   '<div class="my_class">
-                <input type="checkbox" name="done[]" value="'.$index.'">
+    echo   '<div>
+                <input class="toDo" type="checkbox" name="done[]" value="'.$index.'">
                 <label for="done">' . $task . '</label>
             </div>';
 };
 function insert_task_done($index, $task){
-    echo   '<div class="my_class">
+    echo   '<div class="done">
                 <input type="checkbox" name="done[]" value="'.$index.'"checked disabled>
                 <label for="done" style="text-decoration:line-through;color:grey;">' . $task . '</label>
             </div>';

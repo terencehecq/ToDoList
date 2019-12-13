@@ -21,7 +21,7 @@
     },
     {
         "task": "jean mich",
-        "done": false
+        "done": true
     },
     {
         "task": "coucou",
@@ -29,6 +29,22 @@
     },
     {
         "task": "passer l&#39;aspirateur",
+        "done": true
+    },
+    {
+        "task": "Tondre la pelouse (encore)",
+        "done": true
+    },
+    {
+        "task": "ddddd",
+        "done": true
+    },
+    {
+        "task": "passer l&#39;aspirateur",
+        "done": false
+    },
+    {
+        "task": "dsqsqe",
         "done": true
     }
 ]
