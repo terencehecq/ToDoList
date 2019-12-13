@@ -1,8 +1,13 @@
 <?php
 function insert_task ($index, $task){
     echo   '<div class="my_class">
+<<<<<<< HEAD
                 <input type="checkbox" name="done[]" value="'.$index.'">
                 <label for="done">' . $task . '</label>
+=======
+                <input type="checkbox" name="done" value="task'.$index.'">
+                <label for="done">' . $task .  '</label>
+>>>>>>> louis
             </div>';
 };
 function insert_task_done($index, $task){
@@ -37,6 +42,7 @@ if(isset($_POST['done'])){
 
 <div class="content">
 
+<<<<<<< HEAD
     <form method="post">
         <h2> A faire </h2>
         <div class="insert">
@@ -61,5 +67,31 @@ if(isset($_POST['done'])){
             ?>
         </div>
     </form>
+=======
+   
+    <div class="insert">
+    <h2> A faire </h2>
+        <?php 
+            foreach($tasks as $key => $value){
+                if($value->done == false){
+                    insert_task($key, $value->task);
+                };
+            }
+        ?>
+    </div>
+    <button class="arch">Archiver</button>
+
+    
+    <div class="archive">
+    <h2> Archive </h2>
+        <?php 
+            foreach($tasks as $key => $value){
+                if($value->done == true){
+                    insert_task_done($key, $value->task);
+                };
+            }
+        ?>
+    </div>
+>>>>>>> louis
 
 </div>

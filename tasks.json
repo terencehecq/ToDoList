@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "task": "hey hey hey les sraaaaabs",
         "done": true
     },
@@ -21,6 +22,13 @@
     },
     {
         "task": "jean mich",
+=======
+        "task": "kkjiokjiokio",
+        "done": false
+    },
+    {
+        "task": "lolo",
+>>>>>>> louis
         "done": false
     },
     {
