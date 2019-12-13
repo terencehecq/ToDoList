@@ -1,34 +1,29 @@
 let archiver = document.getElementById("archiver");
 let toDo = document.querySelectorAll(".toDo");
+let checked = 0;
 
-console.log(toDo);
+archiver.disabled = true;
 
 toDo.forEach(elem => {
     elem.addEventListener("click", ()=>{
-        elem.parentElement.classList.toggle("valid");
+        if(elem.checked){
+            elem.parentElement.classList.add("valid");
+            checked += 1;
+        }else{
+            elem.parentElement.classList.remove("valid");
+            checked -= 1;
+            
+        }
+        if(checked<1){
+            archiver.disabled = true;
+        }else{
+            archiver.disabled = false;
+        }
     })
 });
 
 
-
-// archiver.addEventListener("click", (e) => {
-//     // e.preventDefault();
-//     try{
-//         let response = await fetch("tasks.json"); 
-//         let tasks = await response.json();
-        
-        
-//         console.log(tasks);
-
-//         // console.log(boolean);
-
-//         // if(picSrc !== ""){
-//         //     document.getElementById("author-pic").style.backgroundImage = `url(${picSrc})`;
-//         // }else{
-//         //     document.getElementById("author-pic").style.backgroundImage = `url(https://originalcreators.dk/wp-content/uploads/2018/05/person-placeholder.png)`;
-//         // }
-    
-//     } catch(e){
-//         console.log(e);
-//     }
-// })
+archiver.addEventListener("click", (e)=>{
+    e.preventDefault();
+    document.getElementById('checklist').submit();
+})

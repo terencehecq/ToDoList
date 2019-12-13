@@ -14,7 +14,7 @@ h2 {
   text-align: center;
 }
 
-.todo {
+h1 {
   background-color: #1F2121;
   margin: 0px;
   color: white;
@@ -54,9 +54,8 @@ h2 {
   font-size: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 40%;
   width: 400px;
-  padding-left: 20px;
+  padding: 10px;
   padding-top: 5px;
   padding-bottom: 50px;
   margin-right: 90px;
@@ -70,7 +69,6 @@ h2 {
 .archive {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 40%;
   width: 400px;
   padding-left: 20px;
   padding-top: 5px;
@@ -82,30 +80,25 @@ h2 {
           box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 
-.insert:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
-.archive:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.content h2 {
+  font-size: 2rem;
+}
+
 .arch {
-  font-size: 50px;
+  font-size: 3rem;
+  height: 70px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-family: 'Amaranth', sans-serif;
   font-family: 'Cormorant Garamond', serif;
   font-family: 'Raleway', sans-serif;
@@ -114,6 +107,10 @@ h2 {
 }
 
 .valid {
-  color: greenyellow;
+  color: #54a114;
+}
+
+.task {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */

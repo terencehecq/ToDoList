@@ -1,12 +1,12 @@
 <?php
 function insert_task ($index, $task){
-    echo   '<div>
+    echo   '<div class="task" draggable="true">
                 <input class="toDo" type="checkbox" name="done[]" value="'.$index.'">
                 <label for="done">' . $task . '</label>
             </div>';
 };
 function insert_task_done($index, $task){
-    echo   '<div class="done">
+    echo   '<div  class="task">
                 <input type="checkbox" name="done[]" value="'.$index.'"checked disabled>
                 <label for="done" style="text-decoration:line-through;color:grey;">' . $task . '</label>
             </div>';
@@ -37,46 +37,21 @@ if(isset($_POST['done'])){
 
 <div class="content">
 
-<<<<<<< HEAD
-    <form method="post">
-        <h2> A faire </h2>
+    <form method="post" id="checklist">
         <div class="insert">
-            <?php 
-                foreach($tasks as $key => $value){
-                    if($value->done == false){
-                        insert_task($key, $value->task);
-                    };
-                }
-            ?>
-        </div>
-        <button id="archiver">Archiver</button>
-
-        <h2> Archive </h2>
-        <div class="archive">
-            <?php 
-                foreach($tasks as $key => $value){
-                    if($value->done == true){
-                        insert_task_done($key, $value->task);
-                    };
-                }
-            ?>
+            <h2> A faire </h2>
+                <?php 
+                    foreach($tasks as $key => $value){
+                        if($value->done == false){
+                            insert_task($key, $value->task);
+                        };
+                    }
+                ?>
         </div>
     </form>
-=======
-   
-    <div class="insert">
-    <h2> A faire </h2>
-        <?php 
-            foreach($tasks as $key => $value){
-                if($value->done == false){
-                    insert_task($key, $value->task);
-                };
-            }
-        ?>
-    </div>
-    <button class="arch">Archiver</button>
+    <button class="arch" id="archiver">Archiver</button>
 
-    
+        
     <div class="archive">
     <h2> Archive </h2>
         <?php 
@@ -87,6 +62,5 @@ if(isset($_POST['done'])){
             }
         ?>
     </div>
->>>>>>> louis
 
 </div>

@@ -11,7 +11,7 @@
     <title>To Do List</title>
 </head>
 <body>
-    <h1 class="todo"> To Do List </h1>
+    <h1> To Do List </h1>
 
     <?php 
         include('form.php');
