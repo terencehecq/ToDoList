@@ -112,4 +112,8 @@ h2 {
   font-family: 'Source Serif Pro', serif;
   font-family: 'Indie Flower', cursive;
 }
+
+.valid {
+  color: greenyellow;
+}
 /*# sourceMappingURL=style.css.map */

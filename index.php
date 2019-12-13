@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css"  href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth|Cormorant+Garamond|Indie+Flower|Raleway|Source+Serif+Pro&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>To Do List</title>
 </head>
 <body>
     <h1 class="todo"> To Do List </h1>
