@@ -29,10 +29,6 @@ h1 {
   width: 30%;
   padding: 10px;
   font-size: 18px;
-  font-family: 'Amaranth', sans-serif;
-  font-family: 'Cormorant Garamond', serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Source Serif Pro', serif;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -102,6 +98,7 @@ h1 {
       align-self: center;
   font-family: 'Indie Flower', cursive;
   cursor: pointer;
+  outline: none;
 }
 
 .valid {
@@ -155,5 +152,9 @@ label {
 
 .toDo:checked:before, .done:checked:before {
   color: #54a114;
+}
+
+img [src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

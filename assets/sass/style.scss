@@ -1,17 +1,10 @@
 body{
     background-color:#ffffff;
     color:rgb(24, 23, 23);
-
-    // font-family: 'Amaranth', sans-serif;
-    // font-family: 'Cormorant Garamond', serif;
-    // font-family: 'Raleway', sans-serif;
-    // font-family: 'Source Serif Pro', serif;
     font-family: 'Indie Flower', cursive;
 
     margin: 0;
     padding: 0;
-
-
 }
 
 h2{
@@ -38,21 +31,12 @@ h1{
     width: 30%;
     padding:10px;
     font-size: 18px;
-    font-family: 'Amaranth', sans-serif;
-    font-family: 'Cormorant Garamond', serif;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Source Serif Pro', serif;
     font-family: 'Indie Flower', cursive;
 }
 
 .add_btn{
-font-size:18px;
-padding:10px;
-
-// font-family: 'Amaranth', sans-serif;
-//     font-family: 'Cormorant Garamond', serif;
-//     font-family: 'Raleway', sans-serif;
-//     font-family: 'Source Serif Pro', serif;
+    font-size:18px;
+    padding:10px;
     font-family: 'Indie Flower', cursive;
 
     
@@ -113,6 +97,7 @@ padding:10px;
     align-self:center;
     font-family: 'Indie Flower', cursive;
     cursor:pointer;
+    outline:none;
 }
 
 .valid{
@@ -158,7 +143,7 @@ label{
     cursor:pointer;
     &:before {
         color: rgba(0, 0, 0, 0.3);
-      }
+    }
 }
 
 .toDo:checked, .done:checked {
@@ -166,4 +151,8 @@ label{
     &:before {
       color: #54a114;
     }
-  }
+}
+
+img [src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+display: none;
+}
