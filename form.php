@@ -1,7 +1,7 @@
 
     <form method="post" class="input_form">
 		<input type="text" name="task" class="task_input" placeholder="Ajouter une tache...">
-		<button type="submit" name="submit" id="add_btn" class="add_btn">Ajouter !</button>
+		<button name="submit" id="add_btn" class="add_btn">Ajouter !</button>
 	</form>
 
 
@@ -9,7 +9,7 @@
 
     $json_file = 'tasks.json';
     //Sanitization
-    if(!empty($_POST['task'])){
+    if(isset($_POST['task']) AND !empty($_POST['task'])){
         $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING); 
 
         
@@ -20,7 +20,15 @@
         $new_task['task'] = $task;
         $new_task['done'] = false;
         
-        if($tasks[count((array)$tasks)-1]->task !== $new_task['task']){
+        if(count((array)$tasks) > 0){
+            if($tasks[count((array)$tasks)-1]->task !== $new_task['task']){
+                $tasks[] = $new_task;
+                
+                $tasks_to_json = json_encode($tasks, JSON_PRETTY_PRINT);
+                
+                file_put_contents($json_file, $tasks_to_json);
+            }
+        }else{
             $tasks[] = $new_task;
             
             $tasks_to_json = json_encode($tasks, JSON_PRETTY_PRINT);
@@ -28,6 +36,6 @@
             file_put_contents($json_file, $tasks_to_json);
         }
 
+        unset($_POST['task']);
     };
 
-    unset($_POST['task']);

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css"  href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth|Cormorant+Garamond|Indie+Flower|Raleway|Source+Serif+Pro&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/cf5b420eb5.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
 </head>
 <body>

@@ -1,10 +1,6 @@
 body {
   background-color: #ffffff;
   color: #181717;
-  font-family: 'Amaranth', sans-serif;
-  font-family: 'Cormorant Garamond', serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Source Serif Pro', serif;
   font-family: 'Indie Flower', cursive;
   margin: 0;
   padding: 0;
@@ -43,10 +39,6 @@ h1 {
 .add_btn {
   font-size: 18px;
   padding: 10px;
-  font-family: 'Amaranth', sans-serif;
-  font-family: 'Cormorant Garamond', serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Source Serif Pro', serif;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -93,17 +85,23 @@ h1 {
   font-size: 2rem;
 }
 
+.arch:disabled {
+  background-color: inherit;
+  cursor: default;
+  border-color: transparent;
+}
+
 .arch {
-  font-size: 3rem;
-  height: 70px;
+  font-size: 2.5rem;
+  height: 80px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #53a114;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: 'Amaranth', sans-serif;
-  font-family: 'Cormorant Garamond', serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Source Serif Pro', serif;
   font-family: 'Indie Flower', cursive;
+  cursor: pointer;
 }
 
 .valid {
@@ -112,5 +110,50 @@ h1 {
 
 .task {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+label {
+  vertical-align: top;
+}
+
+.toDo, .done {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border-radius: 2px;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: 2px solid #555;
+  vertical-align: baseline;
+  outline: none;
+}
+
+.toDo:before, .done:before {
+  font-family: FontAwesome;
+  content: '\f00c';
+  display: block;
+  color: transparent;
+  font-size: 20px;
+  position: relative;
+  bottom: 4px;
+  left: 1px;
+}
+
+.toDo:hover {
+  cursor: pointer;
+}
+
+.toDo:hover:before {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.toDo:checked, .done:checked {
+  position: relative;
+}
+
+.toDo:checked:before, .done:checked:before {
+  color: #54a114;
 }
 /*# sourceMappingURL=style.css.map */
