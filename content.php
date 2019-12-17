@@ -37,8 +37,8 @@ if(isset($_POST['done'])){
 
 <div class="content">
 
-    <form method="post" id="checklist">
-        <div class="insert">
+    <div class="insert">
+        <form method="post" id="checklist">
             <h2> A faire </h2>
                 <?php 
                     if(isset($tasks) AND $tasks != null){
@@ -49,9 +49,9 @@ if(isset($_POST['done'])){
                         };
                     };
                 ?>
-        </div>
-    </form>
-    <button class="arch" id="archiver">Enregistrer</button>
+            <button class="arch" id="archiver"><i class="far fa-save"></i></button>
+        </form>
+    </div>
 
         
     <div class="archive">

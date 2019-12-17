@@ -38,37 +38,8 @@ h1 {
   font-family: 'Indie Flower', cursive;
 }
 
-.insert {
-  font-size: 22px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 400px;
-  padding: 10px;
-  padding-top: 5px;
-  padding-bottom: 50px;
-  margin-right: 90px;
-  margin-top: 50px;
-  padding-bottom: 50px;
-  background-color: #ffd900;
-  -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
-          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
-}
-
-.archive {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 400px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 50px;
-  margin-top: 50px;
-  margin-left: 90px;
-  background-color: #ffd900;
-  -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
-          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
-}
-
 .content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,24 +52,39 @@ h1 {
   font-size: 2rem;
 }
 
+.content .insert, .content .archive {
+  position: relative;
+  font-size: 1.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 40%;
+  min-width: 250px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #ffd900;
+  -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+
 .arch:disabled {
-  background-color: inherit;
   cursor: default;
-  border-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .arch {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 2.5rem;
-  height: 80px;
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #53a114;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: 'Indie Flower', cursive;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   outline: none;
+}
+
+.arch-ok:hover {
+  color: black;
 }
 
 .valid {
@@ -106,6 +92,7 @@ h1 {
 }
 
 .task {
+  font-size: 1.3rem;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
@@ -154,7 +141,7 @@ label {
   color: #54a114;
 }
 
-img [src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */

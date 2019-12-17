@@ -16,8 +16,10 @@ toDo.forEach(elem => {
         }
         if(checked<1){
             archiver.disabled = true;
+            archiver.classList.remove("arch-ok");
         }else{
             archiver.disabled = false;
+            archiver.classList.add("arch-ok")
         }
     })
 });

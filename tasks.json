@@ -29,6 +29,10 @@
     },
     {
         "task": "passer l&#39;aspirateur",
+        "done": true
+    },
+    {
+        "task": "coucou",
         "done": false
     }
 ]
